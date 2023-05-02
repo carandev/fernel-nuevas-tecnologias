@@ -119,8 +119,6 @@ const agregarDato = () => {
 
   if (descripcion.value.trim() !== '' && valor.value.trim() !== ''){
 
-    cargarCabecero();
-
     if (tipo.value === 'ingreso'){
 
       ingresos.push(new Ingreso(descripcion.value, +valor.value));
@@ -134,6 +132,8 @@ const agregarDato = () => {
       cargarEgresos()
 
     }
+
+    cargarCabecero();
 
     valor.value = ''
     descripcion.value = ''
